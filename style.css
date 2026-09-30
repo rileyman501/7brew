@@ -48,7 +48,7 @@ body {
 ----------------------------- */
 
 .brew-logo {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 900;
 
     color: #00AEEF;
@@ -58,6 +58,9 @@ body {
     margin-bottom: 25px;
 
     -webkit-text-stroke: 2px #000000;
+
+    /* Keeps 🥤 7 BREW ☕ on one line */
+    white-space: nowrap;
 }
 
 
@@ -77,6 +80,18 @@ h2 {
     color: #000000;
 
     line-height: 1.4;
+}
+
+
+/* -----------------------------
+   YES PAGE TIME QUESTION
+----------------------------- */
+
+.time-question {
+    font-size: 20px;
+
+    /* Keeps the question on one line */
+    white-space: nowrap;
 }
 
 
@@ -125,7 +140,6 @@ p {
 .yes-button,
 .no-button,
 .submit-button {
-
     padding: 15px 28px;
 
     border: 3px solid #000000;
@@ -173,7 +187,6 @@ p {
 .yes-button:hover,
 .no-button:hover,
 .submit-button:hover {
-
     transform: translateY(-3px);
 
     box-shadow: 7px 7px 0 #000000;
@@ -233,7 +246,7 @@ input:focus {
 
 
 /* -----------------------------
-   LET'S GO BUTTON
+   SUBMIT BUTTON
 ----------------------------- */
 
 .submit-button {
@@ -291,13 +304,20 @@ input:focus {
     }
 
     .card {
-        padding: 25px;
+        padding: 22px;
 
         box-shadow: 6px 6px 0 #000000;
     }
 
+    /* Keeps 🥤 7 BREW ☕ on one line */
     .brew-logo {
-        font-size: 45px;
+        font-size: 32px;
+
+        letter-spacing: 1px;
+
+        white-space: nowrap;
+
+        -webkit-text-stroke: 1px #000000;
     }
 
     .coffee {
@@ -312,6 +332,13 @@ input:focus {
         font-size: 21px;
     }
 
+    /* Keeps YES page question on one line */
+    .time-question {
+        font-size: 15px;
+
+        white-space: nowrap;
+    }
+
     .buttons {
         flex-direction: column;
     }
@@ -320,17 +347,39 @@ input:focus {
     .no-button {
         width: 100%;
     }
-}
 
-/* Keep the 7 Brew time question on one line */
-.time-question {
-    font-size: 20px;
-    white-space: nowrap;
-}
-
-/* Make it smaller on phones so it still fits */
-@media (max-width: 500px) {
-    .time-question {
+    .submit-button {
         font-size: 16px;
+        padding: 14px 15px;
+    }
+
+    .begging-photo {
+        max-width: 100%;
+    }
+}
+
+
+/* -----------------------------
+   EXTRA SMALL PHONES
+----------------------------- */
+
+@media (max-width: 350px) {
+
+    .card {
+        padding: 16px;
+    }
+
+    .brew-logo {
+        font-size: 27px;
+
+        letter-spacing: 0;
+
+        white-space: nowrap;
+    }
+
+    .time-question {
+        font-size: 13px;
+
+        white-space: nowrap;
     }
 }
