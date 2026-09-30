@@ -321,3 +321,16 @@ input:focus {
         width: 100%;
     }
 }
+
+/* Keep the 7 Brew time question on one line */
+.time-question {
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+/* Make it smaller on phones so it still fits */
+@media (max-width: 500px) {
+    .time-question {
+        font-size: 16px;
+    }
+}
