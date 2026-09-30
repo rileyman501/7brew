@@ -140,9 +140,18 @@ function secretClick() {
 
     if (secretClicks >= 7) {
 
-        document.getElementById("secretMessage").innerHTML =
-            "🔓 Secret unlocked! I knew Annie was pretty smart, but not THIS smart to find this 😏";
+        document.getElementById("secretPopup").style.display = "flex";
 
         secretClicks = 0;
     }
+}
+
+
+// ---------------------------------
+// CLOSE SECRET POPUP
+// ---------------------------------
+
+function closeSecret() {
+
+    document.getElementById("secretPopup").style.display = "none";
 }
