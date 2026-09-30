@@ -80,10 +80,17 @@ function sendToCalendar(date, time) {
 
     .then(() => {
 
-        message.innerHTML =
-            "🎉 It's official! 7 Brew with Annie is on the calendar! 😁";
+    message.innerHTML =
+        "🎉 It's official! 7 Brew with Annie is on the calendar! 😁";
 
-    })
+    setTimeout(() => {
+
+        message.innerHTML =
+            "You + me + 7 Brew, you know I'm buying 😉💵";
+
+    }, 3000);
+
+})
 
     .catch(() => {
 
