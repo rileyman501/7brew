@@ -88,7 +88,7 @@ function sendToCalendar(date, time) {
         message.innerHTML =
             "You + me + 7 Brew, you know I'm buying 😉💵";
 
-    }, 3000);
+    }, 6000);
 
 })
 
