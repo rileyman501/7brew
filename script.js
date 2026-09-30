@@ -81,14 +81,14 @@ function sendToCalendar(date, time) {
     .then(() => {
 
         message.innerHTML =
-            "🎉 It's official! 7 Brew with Annie is on the calendar! 🥤☕ 😁";
+            "🎉 It's official! 7 Brew with Annie is on the calendar! 😁";
 
     })
 
     .catch(() => {
 
         message.innerHTML =
-            "Something went wrong 😭 Please try again.";
+            "Something went wrong Please try again.";
 
     });
 }
