@@ -28,48 +28,137 @@
             class="begging-photo"
         >
 
-        <h2>
-            Okay... how about another day?
-        </h2>
 
-        <p>
-            Pick a day and time we can go to 7 Brew 
-        </p>
+        <!-- ASK ABOUT ANOTHER DAY -->
 
-        <form onsubmit="submitFuture(event)">
+        <div id="anotherDayQuestion">
 
-            <label for="date">
-                Pick a date:
-            </label>
+            <h2>
+                Okay... how about another day?
+            </h2>
 
-            <input
-                type="date"
-                id="date"
-                required
+            <div class="buttons">
+
+                <button
+                    type="button"
+                    class="yes-button choice-button"
+                    onclick="anotherDayYes()"
+                >
+                    YES!! 🥤☕
+                </button>
+
+                <button
+                    type="button"
+                    class="no-button choice-button"
+                    onclick="anotherDayNo()"
+                >
+                    NO 😔
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR MESSAGE
+             ONLY APPEARS IF SHE CLICKS NO -->
+
+        <div id="carSection" class="hidden-section">
+
+            <img
+                src="car.jpeg"
+                alt="This could be us"
+                class="begging-photo"
             >
 
-            <label for="futureTime">
-                Pick a time:
-            </label>
+            <h2>
+                This could be us right now 😭
+            </h2>
 
-            <input
-                type="time"
-                id="futureTime"
-                required
-            >
+            <p>
+                Anyway... how about another day? 😂
+            </p>
 
-            <button
-                type="submit"
-                class="submit-button"
-            >
-                 "Fine, I fold you convinced me Riley!" - Annie
-            </button>
+        </div>
 
-        </form>
 
-        <p id="message"></p>
+        <!-- DATE AND TIME
+             APPEARS AFTER YES OR NO -->
+
+        <div id="dateSection" class="hidden-section">
+
+            <h2>
+                Pick a day and time we can go to 7 Brew 🥤☕
+            </h2>
+
+            <form onsubmit="submitFuture(event)">
+
+                <label for="date">
+                    Pick a date:
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+
+                <label for="futureTime">
+                    Pick a time:
+                </label>
+
+                <input
+                    type="time"
+                    id="futureTime"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    "Fine, I fold you convinced me Riley!" - Annie
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </div>
 
     </div>
+
+
+    <!-- YES / NO PAGE CODE -->
+
+    <script>
+
+        function anotherDayYes() {
+
+            // Hide the YES / NO question
+            document.getElementById("anotherDayQuestion").style.display = "none";
+
+            // Show the calendar section
+            document.getElementById("dateSection").style.display = "block";
+        }
+
+
+        function anotherDayNo() {
+
+            // Hide the YES / NO question
+            document.getElementById("anotherDayQuestion").style.display = "none";
+
+            // Show the car
+            document.getElementById("carSection").style.display = "block";
+
+            // Show the calendar anyway 
+            document.getElementById("dateSection").style.display = "block";
+        }
+
+    </script>
+
 
     <script src="script.js"></script>
 
