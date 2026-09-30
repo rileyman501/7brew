@@ -397,3 +397,77 @@ input:focus {
 #secretLogo:active {
     transform: scale(0.95);
 }
+
+/* -----------------------------
+   SECRET EASTER EGG POPUP
+----------------------------- */
+
+.secret-popup {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+
+/* POPUP BOX */
+
+.secret-popup-box {
+    width: 100%;
+    max-width: 450px;
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border: 5px solid #000000;
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 8px 8px 0 #00AEEF;
+}
+
+
+/* POPUP TITLE */
+
+.secret-popup-box h2 {
+    color: #00AEEF;
+
+    font-size: 30px;
+
+    margin-top: 0;
+}
+
+
+/* POPUP MESSAGE */
+
+.secret-popup-box p {
+    color: #000000;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    line-height: 1.5;
+}
+
+
+/* POPUP CLOSE BUTTON */
+
+.secret-popup-box .submit-button {
+    margin-top: 15px;
+}
