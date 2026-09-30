@@ -127,32 +127,22 @@ if (datePicker) {
 }
 
 // ---------------------------------
-// SECRET 7-CLICK EASTER EGG
+// 7 CLICK EASTER EGG
 // ---------------------------------
 
 let secretClicks = 0;
 
-const secretLogo =
-    document.getElementById("secretLogo");
+function secretClick() {
 
-const secretMessage =
-    document.getElementById("secretMessage");
+    secretClicks++;
 
-if (secretLogo) {
+    console.log("7 Brew clicks: " + secretClicks);
 
-    secretLogo.addEventListener("click", function () {
+    if (secretClicks >= 7) {
 
-        secretClicks++;
+        document.getElementById("secretMessage").innerHTML =
+            "🔓 Secret unlocked! I knew Annie was pretty smart, but not THIS smart to find this 😏";
 
-        if (secretClicks === 7) {
-
-            secretMessage.innerHTML =
-                "Secret unlocked! I knew Annie was pretty smart, but not THIS smart to find this 😏";
-
-            secretLogo.style.cursor = "default";
-        }
-
-    });
-
-    secretLogo.style.cursor = "pointer";
+        secretClicks = 0;
+    }
 }
