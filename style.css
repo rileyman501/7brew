@@ -471,3 +471,33 @@ input:focus {
 .secret-popup-box .submit-button {
     margin-top: 15px;
 }
+
+/* -----------------------------
+   NO PAGE CHOICES
+----------------------------- */
+
+.hidden-section {
+    display: none;
+}
+
+
+/* Make button elements match
+   the YES / NO buttons */
+
+.choice-button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Space above the car */
+
+#carSection {
+    margin-top: 30px;
+}
+
+
+/* Space above calendar */
+
+#dateSection {
+    margin-top: 30px;
+}
