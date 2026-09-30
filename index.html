@@ -12,29 +12,31 @@
 
 <body>
 
-    <div
-    class="brew-logo"
-    id="secretLogo"
-    onclick="secretClick()"
->
-    🥤 7 BREW ☕
-</div>
+    <div class="card">
 
-<p id="secretMessage"></p>
+        <div
+            class="brew-logo"
+            id="secretLogo"
+            onclick="secretClick()"
+        >
+            🥤 7 BREW ☕
+        </div>
 
-        
-        <h1>Hey Annie...
+        <h1>
+            Hey Annie...
             <br>
-            AKA Homegirl         
-             <br>
+            AKA Homegirl
+            <br>
             AKA Best Friend
             <br>
             AKA 7 Brew Queen
         </h1>
 
-        <h2>Wanna let your sugar-free daddy take you to 7 Brew today?</h2>
+        <h2>
+            Wanna let your sugar-free daddy take you to 7 Brew today?
+        </h2>
 
-        <p>I think you should say yes </p>
+        <p>I think you should say yes</p>
 
         <div class="buttons">
 
@@ -50,6 +52,43 @@
 
     </div>
 
+
+<!-- SECRET EASTER EGG POPUP -->
+
+<div id="secretPopup" class="secret-popup">
+
+    <div class="secret-popup-box">
+
+        <h2>Secret Unlocked!</h2>
+
+        <p>
+            I knew Annie was pretty smart,
+            but not THIS smart to find this 😏
+            <br><br>
+
+            Screenshot this and I guess you get one free pass
+            for me to do anything you want or buy you anything you want.
+            <br><br>
+
+            Within reason... sorry, no Porsche 😂
+        </p>
+
+        <button
+            class="submit-button"
+            onclick="closeSecret()"
+        >
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
+
+</html>
 
 </html>
