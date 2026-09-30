@@ -125,3 +125,34 @@ if (datePicker) {
     datePicker.min =
         `${year}-${month}-${day}`;
 }
+
+// ---------------------------------
+// SECRET 7-CLICK EASTER EGG
+// ---------------------------------
+
+let secretClicks = 0;
+
+const secretLogo =
+    document.getElementById("secretLogo");
+
+const secretMessage =
+    document.getElementById("secretMessage");
+
+if (secretLogo) {
+
+    secretLogo.addEventListener("click", function () {
+
+        secretClicks++;
+
+        if (secretClicks === 7) {
+
+            secretMessage.innerHTML =
+                "Secret unlocked! I knew Annie was pretty smart, but not THIS smart to find this 😏";
+
+            secretLogo.style.cursor = "default";
+        }
+
+    });
+
+    secretLogo.style.cursor = "pointer";
+}
