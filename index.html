@@ -10,85 +10,240 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
     <div class="card">
+
+
+        <!-- =================================
+             7 BREW SECRET
+             CLICK 7 TIMES
+        ================================== -->
 
         <div
             class="brew-logo"
             id="secretLogo"
             onclick="secretClick()"
+            style="cursor: pointer; user-select: none;"
         >
             🥤 7 BREW ☕
         </div>
 
+
+
+        <!-- =================================
+             ANNIE TITLE
+             CLICK "HEY ANNIE..." ONCE
+        ================================== -->
+
         <h1>
-            Hey Annie...
+
+            <span
+                id="annieSecret"
+                onclick="openAnniePhoto()"
+                style="cursor: pointer; user-select: none;"
+            >
+                Hey Annie...
+            </span>
+
             <br>
             AKA Homegirl
+
             <br>
             AKA Best Friend
+
             <br>
             AKA 7 Brew Queen
+
         </h1>
+
+
+
+        <!-- MAIN QUESTION -->
 
         <h2>
             Wanna let your sugar-free daddy take you to 7 Brew today?
         </h2>
 
-        <p>I think you should say yes</p>
+
+        <p>
+            I think you should say yes
+        </p>
+
+
+
+        <!-- YES / NO BUTTONS -->
 
         <div class="buttons">
 
-            <a href="yes.html" class="yes-button">
+            <a
+                href="yes.html"
+                class="yes-button"
+            >
                 YES!! 🥤☕
             </a>
 
-            <a href="no.html" class="no-button">
+
+            <a
+                href="no.html"
+                class="no-button"
+            >
                 No 😔
             </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         7 CLICK SECRET POPUP
+    ================================== -->
+
+    <div
+        id="secretPopup"
+        class="secret-popup"
+        style="display: none;"
+    >
+
+        <div class="secret-popup-box">
+
+
+            <h2>
+                Secret Unlocked!
+            </h2>
+
+
+            <p>
+
+                I knew Annie was pretty smart,
+                but not THIS smart to find this 😏
+
+                <br><br>
+
+                Screenshot this and I guess you get one free pass
+                for me to do anything you want or buy you anything you want.
+
+                <br><br>
+
+                Within reason... sorry, no Porsche 😂
+
+            </p>
+
+
+            <button
+                class="submit-button"
+                onclick="closeSecret()"
+            >
+                Close
+            </button>
+
 
         </div>
 
     </div>
 
 
-<!-- SECRET EASTER EGG POPUP -->
 
-<div id="secretPopup" class="secret-popup">
+    <!-- =================================
+         HEY ANNIE PHOTO POPUP
+    ================================== -->
 
-    <div class="secret-popup-box">
+    <div
+        id="anniePhotoPopup"
+        class="secret-popup"
+        style="display: none;"
+    >
 
-        <h2>Secret Unlocked!</h2>
+        <div class="secret-popup-box">
 
-        <p>
-            I knew Annie was pretty smart,
-            but not this smart to find this 😏
-            <br><br>
 
-            Screenshot this and I guess you get one free pass
-            for me to do anything you want or buy you anything you want.
-            <br><br>
+            <img
+                src="baddie.jpg"
+                alt="Annie"
+                class="annie-secret-photo"
+            >
 
-            Within reason... sorry, no Porsche 😂
-        </p>
 
-        <button
-            class="submit-button"
-            onclick="closeSecret()"
-        >
-            Close
-        </button>
+            <button
+                class="submit-button"
+                onclick="closeAnniePhoto()"
+            >
+                Close
+            </button>
+
+
+        </div>
 
     </div>
 
-</div>
 
 
-<script src="script.js"></script>
+    <!-- =================================
+         SECRET JAVASCRIPT
+    ================================== -->
+
+    <script>
+
+
+        // -----------------------------
+        // 7 BREW 7-CLICK SECRET
+        // -----------------------------
+
+        let secretClicks = 0;
+
+
+        function secretClick() {
+
+            secretClicks++;
+
+            console.log("7 Brew secret clicks: " + secretClicks);
+
+
+            if (secretClicks >= 7) {
+
+                document.getElementById("secretPopup").style.display = "flex";
+
+                secretClicks = 0;
+            }
+        }
+
+
+        function closeSecret() {
+
+            document.getElementById("secretPopup").style.display = "none";
+        }
+
+
+
+        // -----------------------------
+        // HEY ANNIE PHOTO SECRET
+        // -----------------------------
+
+        function openAnniePhoto() {
+
+            document.getElementById("anniePhotoPopup").style.display = "flex";
+        }
+
+
+        function closeAnniePhoto() {
+
+            document.getElementById("anniePhotoPopup").style.display = "none";
+        }
+
+
+    </script>
+
+
+
+    <!-- YOUR NORMAL JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
 
 </body>
-
-</html>
 
 </html>
