@@ -17,8 +17,8 @@
 
 
         <!-- =================================
-             7 BREW SECRET
-             CLICK 7 TIMES
+             7 BREW LOGO
+             CLICK 7 TIMES FOR SECRET
         ================================== -->
 
         <div
@@ -33,34 +33,59 @@
 
 
         <!-- =================================
-             ANNIE TITLE
-             CLICK "HEY ANNIE..." ONCE
+             CLICKABLE PHOTO SECRETS
         ================================== -->
 
         <h1>
 
+            <!-- Hey Annie opens crazy.PNG -->
             <span
-                id="annieSecret"
-                onclick="openAnniePhoto()"
-                style="cursor: pointer; user-select: none;"
+                class="clickable-name"
+                onclick="openPhoto('crazy.PNG')"
             >
                 Hey Annie...
             </span>
 
             <br>
-            AKA Homegirl
+
+
+            <!-- Homegirl opens finger.jpeg -->
+            <span
+                class="clickable-name"
+                onclick="openPhoto('finger.jpeg')"
+            >
+                AKA Homegirl
+            </span>
 
             <br>
-            AKA Best Friend
+
+
+            <!-- Best Friend opens braves.jpeg -->
+            <span
+                class="clickable-name"
+                onclick="openPhoto('braves.jpeg')"
+            >
+                AKA Best Friend
+            </span>
 
             <br>
-            AKA 7 Brew Queen
+
+
+            <!-- 7 Brew Queen opens baddie.JPG -->
+            <span
+                class="clickable-name"
+                onclick="openPhoto('baddie.JPG')"
+            >
+                AKA 7 Brew Queen
+            </span>
 
         </h1>
 
 
 
-        <!-- MAIN QUESTION -->
+        <!-- =================================
+             MAIN QUESTION
+        ================================== -->
 
         <h2>
             Wanna let your sugar-free daddy take you to 7 Brew today?
@@ -73,7 +98,9 @@
 
 
 
-        <!-- YES / NO BUTTONS -->
+        <!-- =================================
+             YES / NO BUTTONS
+        ================================== -->
 
         <div class="buttons">
 
@@ -94,7 +121,6 @@
 
         </div>
 
-
     </div>
 
 
@@ -111,14 +137,12 @@
 
         <div class="secret-popup-box">
 
-
             <h2>
                 Secret Unlocked!
             </h2>
 
 
             <p>
-
                 I knew Annie was pretty smart,
                 but not THIS smart to find this 😏
 
@@ -130,17 +154,16 @@
                 <br><br>
 
                 Within reason... sorry, no Porsche 😂
-
             </p>
 
 
             <button
+                type="button"
                 class="submit-button"
                 onclick="closeSecret()"
             >
                 Close
             </button>
-
 
         </div>
 
@@ -149,32 +172,32 @@
 
 
     <!-- =================================
-         HEY ANNIE PHOTO POPUP
+         PHOTO POPUP
     ================================== -->
 
     <div
-        id="anniePhotoPopup"
+        id="photoPopup"
         class="secret-popup"
         style="display: none;"
     >
 
         <div class="secret-popup-box">
 
-
             <img
-                src="baddie.JPG"
-                alt="Annie"
+                id="popupPhoto"
+                src=""
+                alt="Secret photo"
                 class="annie-secret-photo"
             >
 
 
             <button
+                type="button"
                 class="submit-button"
-                onclick="closeAnniePhoto()"
+                onclick="closePhoto()"
             >
                 Close
             </button>
-
 
         </div>
 
@@ -188,10 +211,9 @@
 
     <script>
 
-
-        // -----------------------------
+        // ---------------------------------
         // 7 BREW 7-CLICK SECRET
-        // -----------------------------
+        // ---------------------------------
 
         let secretClicks = 0;
 
@@ -200,7 +222,7 @@
 
             secretClicks++;
 
-            console.log("7 Brew secret clicks: " + secretClicks);
+            console.log("7 Brew clicks: " + secretClicks);
 
 
             if (secretClicks >= 7) {
@@ -219,19 +241,23 @@
 
 
 
-        // -----------------------------
-        // HEY ANNIE PHOTO SECRET
-        // -----------------------------
+        // ---------------------------------
+        // PHOTO SECRETS
+        // ---------------------------------
 
-        function openAnniePhoto() {
+        function openPhoto(photoName) {
 
-            document.getElementById("anniePhotoPopup").style.display = "flex";
+            document.getElementById("popupPhoto").src = photoName;
+
+            document.getElementById("photoPopup").style.display = "flex";
         }
 
 
-        function closeAnniePhoto() {
+        function closePhoto() {
 
-            document.getElementById("anniePhotoPopup").style.display = "none";
+            document.getElementById("photoPopup").style.display = "none";
+
+            document.getElementById("popupPhoto").src = "";
         }
 
 
@@ -239,7 +265,9 @@
 
 
 
-    <!-- YOUR NORMAL JAVASCRIPT -->
+    <!-- =================================
+         NORMAL WEBSITE JAVASCRIPT
+    ================================== -->
 
     <script src="script.js"></script>
 
