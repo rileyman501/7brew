@@ -383,3 +383,17 @@ input:focus {
         white-space: nowrap;
     }
 }
+#secretLogo {
+    cursor: pointer;
+
+    /* Stops the text from being highlighted */
+    user-select: none;
+    -webkit-user-select: none;
+
+    /* Makes it feel clickable */
+    transition: transform 0.1s;
+}
+
+#secretLogo:active {
+    transform: scale(0.95);
+}
