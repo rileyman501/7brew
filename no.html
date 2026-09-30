@@ -29,7 +29,7 @@
         >
 
 
-        <!-- ASK ABOUT ANOTHER DAY -->
+        <!-- ANOTHER DAY QUESTION -->
 
         <div id="anotherDayQuestion">
 
@@ -60,10 +60,14 @@
         </div>
 
 
-        <!-- CAR MESSAGE
-             ONLY APPEARS IF SHE CLICKS NO -->
+        <!--
+            ONLY SHOWS IF SHE CLICKS NO
+        -->
 
-        <div id="carSection" class="hidden-section">
+        <div
+            id="carSection"
+            style="display: none;"
+        >
 
             <img
                 src="car.jpeg"
@@ -76,16 +80,21 @@
             </h2>
 
             <p>
-                Anyway... how about another day? 😂
+                How about another day? 😂
             </p>
 
         </div>
 
 
-        <!-- DATE AND TIME
-             APPEARS AFTER YES OR NO -->
+        <!--
+            CALENDAR
+            ONLY SHOWS AFTER YES OR NO
+        -->
 
-        <div id="dateSection" class="hidden-section">
+        <div
+            id="dateSection"
+            style="display: none;"
+        >
 
             <h2>
                 Pick a day and time we can go to 7 Brew 🥤☕
@@ -131,34 +140,39 @@
     </div>
 
 
-    <!-- YES / NO PAGE CODE -->
+    <!-- YES / NO CODE -->
 
     <script>
 
         function anotherDayYes() {
 
-            // Hide the YES / NO question
+            // Hide YES / NO buttons
             document.getElementById("anotherDayQuestion").style.display = "none";
 
-            // Show the calendar section
+            // Make sure car stays hidden
+            document.getElementById("carSection").style.display = "none";
+
+            // Show calendar
             document.getElementById("dateSection").style.display = "block";
         }
 
 
         function anotherDayNo() {
 
-            // Hide the YES / NO question
+            // Hide YES / NO buttons
             document.getElementById("anotherDayQuestion").style.display = "none";
 
-            // Show the car
+            // Show car picture/message
             document.getElementById("carSection").style.display = "block";
 
-            // Show the calendar anyway 
+            // Show calendar
             document.getElementById("dateSection").style.display = "block";
         }
 
     </script>
 
+
+    <!-- GOOGLE CALENDAR CODE -->
 
     <script src="script.js"></script>
 
