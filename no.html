@@ -1,0 +1,57 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Annie 😭</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>ANNIE PLEASE 😭</h1>
+
+    <img
+        src="begging.jpg"
+        alt="Me begging Annie to go to 7 Brew"
+        class="begging-photo"
+    >
+
+    <h2>Okay... how about another day?</h2>
+
+    <p>Pick a day and time we can go to 7 Brew ☕</p>
+
+    <form onsubmit="submitFuture(event)">
+
+        <label for="date">Pick a date:</label>
+
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+        <label for="futureTime">Pick a time:</label>
+
+        <input
+            type="time"
+            id="futureTime"
+            required
+        >
+
+        <button type="submit" class="submit-button">
+            Fine, I'll Go ☕❤️
+        </button>
+
+    </form>
+
+    <p id="message"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
