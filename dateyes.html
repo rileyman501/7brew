@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's a Date ❤️</title>
+    <link rel="stylesheet" href="datestyle.css">
+</head>
+<body>
+    <div class="date-card">
+        <div class="heart">💗</div>
+
+        <h1>YAYYY! ❤️</h1>
+
+        <h2>Okay Annie, what kind of food are you feeling?</h2>
+
+        <p>Pick one and then we can pick the day!</p>
+
+        <div class="restaurant-grid">
+            <button type="button" class="restaurant-button" onclick="chooseRestaurant('Italian 🍝')">
+                Italian 🍝
+            </button>
+
+            <button type="button" class="restaurant-button" onclick="chooseRestaurant('Mexican 🌮')">
+                Mexican 🌮
+            </button>
+
+            <button type="button" class="restaurant-button" onclick="chooseRestaurant('Sushi 🍣')">
+                Sushi 🍣
+            </button>
+
+            <button type="button" class="restaurant-button" onclick="chooseRestaurant('Steak 🥩')">
+                Steak 🥩
+            </button>
+
+            <button type="button" class="restaurant-button" onclick="chooseRestaurant('American 🍔')">
+                American 🍔
+            </button>
+
+            <button type="button" class="restaurant-button" onclick="chooseRestaurant('Surprise Me 🎲')">
+                Surprise Me 🎲
+            </button>
+        </div>
+
+        <div id="datePickerSection" class="hidden-section">
+            <h2 id="restaurantChoice"></h2>
+
+            <h2>Now pick a day and time ❤️</h2>
+
+            <form onsubmit="submitDate(event)">
+                <label for="date">Pick a date:</label>
+                <input type="date" id="date" required>
+
+                <label for="dateTime">Pick a time:</label>
+                <input type="time" id="dateTime" required>
+
+                <button type="submit" class="date-submit-button">
+                    It's a date ❤️
+                </button>
+            </form>
+
+            <div id="dateMessage"></div>
+        </div>
+    </div>
+
+    <script src="datescript.js"></script>
+</body>
+</html>
